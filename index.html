@@ -3,491 +3,330 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Romina Saljooghian | Automation & AI Engineer</title>
-  <meta name="description" content="Portfolio of Romina Saljooghian — ML Engineering, Computer Vision, Robotics AI. MSc Automation & Control, Politecnico di Milano.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Romina Saljooghian | AI & Automation Engineer</title>
+  <meta name="description" content="Portfolio of Romina Saljooghian — AI / ML Engineering, Computer Vision, Robotics & Control. MSc Automation & Control, Politecnico di Milano. Based in Milan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<main>
+  <!-- live constellation backdrop -->
+  <canvas class="constellation" data-constellation aria-hidden="true"></canvas>
+  <div class="bg-glow" aria-hidden="true"><span class="blob blob-1"></span><span class="blob blob-2"></span></div>
+
+  <!-- custom cursor (desktop) -->
+  <div class="cursor-dot" data-cursor-dot aria-hidden="true"></div>
+  <div class="cursor-ring" data-cursor-ring aria-hidden="true"></div>
+
+  <!-- scroll progress -->
+  <div class="progress" data-progress aria-hidden="true"></div>
 
   <!-- ══════════════════════════════════════════════════ -->
-  <!--  SIDEBAR                                          -->
+  <!--  NAVBAR                                            -->
   <!-- ══════════════════════════════════════════════════ -->
-  <aside class="sidebar" data-sidebar>
-
-    <div class="sidebar-info">
-      <figure class="avatar-box">
-        <!-- Replace with your photo: <img src="assets/photo.jpg" alt="Romina" width="80"> -->
-        <img src="assets/photo.jpg" alt="Romina" width="80">
-        <!-- <div class="avatar-placeholder">RS</div> -->
-      </figure>
-      <div class="info-content">
-        <h1 class="name">Romina Saljooghian</h1>
-        <p class="title">Automation & AI Engineer</p>
-      </div>
-      <button class="info-more-btn" data-sidebar-btn>
-        <span>Show Contacts</span>
-        <ion-icon name="chevron-down"></ion-icon>
-      </button>
-    </div>
-
-    <div class="sidebar-info-more">
-      <div class="separator"></div>
-
-      <ul class="contacts-list">
-        <li class="contact-item">
-          <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
-          <div class="contact-info">
-            <p class="contact-title">Email</p>
-            <a href="mailto:romina.saljooghian@mail.polimi.it" class="contact-link">romina.saljooghian@mail.polimi.it</a>
-          </div>
-        </li>
-        <li class="contact-item">
-          <div class="icon-box"><ion-icon name="call-outline"></ion-icon></div>
-          <div class="contact-info">
-            <p class="contact-title">Phone</p>
-            <a href="tel:+393515063959" class="contact-link">+39 351 506 3959</a>
-          </div>
-        </li>
-        <li class="contact-item">
-          <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
-          <div class="contact-info">
-            <p class="contact-title">Location</p>
-            <address>Milan, Italy</address>
-          </div>
-        </li>
-      </ul>
-
-      <div class="separator"></div>
-
-      <ul class="social-list">
-        <li class="social-item">
-          <a href="https://linkedin.com/in/romina-saljooghian" target="_blank" rel="noopener" class="social-link">
-            <ion-icon name="logo-linkedin"></ion-icon>
-          </a>
-        </li>
-        <li class="social-item">
-          <a href="https://github.com/Romi-s" target="_blank" rel="noopener" class="social-link">
-            <ion-icon name="logo-github"></ion-icon>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-  </aside>
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!--  MAIN CONTENT                                     -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div class="main-content">
-
-    <nav class="navbar">
-      <ul class="navbar-list">
-        <li><button class="navbar-link active" data-nav-link>About</button></li>
-        <li><button class="navbar-link" data-nav-link>Resume</button></li>
-        <li><button class="navbar-link" data-nav-link>Portfolio</button></li>
-        <li><button class="navbar-link" data-nav-link>Contact</button></li>
-      </ul>
+  <header class="nav" data-nav>
+    <a href="#hero" class="nav-logo" data-magnetic>RS<span>.</span></a>
+    <nav class="nav-links" data-nav-links>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
+    <div class="nav-right">
+      <a href="assets/Romina_Saljooghian_CV.pdf" download class="btn btn-sm btn-cv" data-magnetic>
+        <ion-icon name="download-outline"></ion-icon> <span class="cv-full">Download </span>CV
+      </a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Menu"><ion-icon name="menu-outline"></ion-icon></button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ─── HERO ───────────────────────────────────── -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <span class="hero-eyebrow reveal"><span class="dot"></span> Available for AI / Automation roles · Milan, Italy</span>
+          <h1 class="hero-name">Romina Saljooghian</h1>
+          <p class="hero-role reveal"><span class="grad-text">AI &amp; Automation Engineer</span></p>
+          <p class="hero-tagline reveal">
+            Control engineer by training, machine-learning practitioner by choice — working where
+            <strong>control, perception, and learning</strong> meet. From model-predictive control on real
+            robots to deep-learning pipelines and agentic AI systems.
+          </p>
+          <div class="hero-cta reveal">
+            <a href="#projects" class="btn btn-primary" data-magnetic>View Work <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            <a href="#contact" class="btn btn-ghost" data-magnetic>Get in touch</a>
+          </div>
+          <ul class="hero-social reveal">
+            <li><a href="https://github.com/Romi-s" target="_blank" rel="noopener" aria-label="GitHub" data-magnetic><ion-icon name="logo-github"></ion-icon></a></li>
+            <li><a href="https://linkedin.com/in/romina-saljooghian" target="_blank" rel="noopener" aria-label="LinkedIn" data-magnetic><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="mailto:romina.saljooghian@mail.polimi.it" aria-label="Email" data-magnetic><ion-icon name="mail-outline"></ion-icon></a></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-photo-ring" data-tilt>
+            <img src="assets/photo.jpg" alt="Romina Saljooghian" class="hero-photo">
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong data-count="8" data-suffix="+">0</strong><span>Shipped projects</span></div>
+            <div class="stat"><strong data-count="107" data-suffix="/110">0</strong><span>MSc final grade</span></div>
+            <div class="stat"><strong data-count="4" data-suffix="">0</strong><span>Foundation models chained</span></div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
 
     <!-- ─── ABOUT ──────────────────────────────────── -->
-    <article class="about active" data-page="about">
-      <header><h2 class="h2 article-title">About Me</h2></header>
-
-      <section class="about-text">
-        <p>Control engineer by training and machine learning practitioner by choice. I'm most comfortable working at the intersection of <strong>control, perception, and learning</strong>.</p>
-        <p>I recently completed an MSc in Automation and Control Engineering at Politecnico di Milano, with work spanning both hands-on robotics and end-to-end ML development &mdash; from deploying model predictive control on real robotic hardware to building deep learning pipelines and agentic AI systems.</p>
-        <p>My thesis combined these threads in an <strong>open-vocabulary perception system</strong> for robotic manipulation, using foundation models to produce structured scene graphs that enable a robot to understand not only what it sees, but how objects relate to one another in space.</p>
-      </section>
-
-      <section class="service">
-        <h3 class="h3 service-title">What I Do</h3>
-        <ul class="service-list">
-          <li class="service-item">
-            <div class="service-icon-box"><ion-icon name="analytics-outline"></ion-icon></div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Machine Learning & AI</h4>
-              <p class="service-item-text">Deep learning pipelines, foundation models, LLM-based agentic systems, RAG pipelines, prompt engineering, experiment tracking.</p>
-            </div>
-          </li>
-          <li class="service-item">
-            <div class="service-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Computer Vision</h4>
-              <p class="service-item-text">Scene graph generation, image classification, object detection, vision-language models, open-vocabulary perception.</p>
-            </div>
-          </li>
-          <li class="service-item">
-            <div class="service-icon-box"><ion-icon name="hardware-chip-outline"></ion-icon></div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Robotics & Control</h4>
-              <p class="service-item-text">MPC, LQR, Kalman filtering, system identification, trajectory tracking, real hardware deployment on Quanser platforms.</p>
-            </div>
-          </li>
-          <li class="service-item">
-            <div class="service-icon-box"><ion-icon name="server-outline"></ion-icon></div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Backend & API Development</h4>
-              <p class="service-item-text">FastAPI REST services, production-grade testing with pytest, MLflow experiment tracking, CI-ready Python packages.</p>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-    </article>
-
-    <!-- ─── RESUME ─────────────────────────────────── -->
-    <article class="resume" data-page="resume">
-      <header><h2 class="h2 article-title">Resume</h2></header>
-
-      <div class="cv-download">
-        <a href="assets/Romina_Saljooghian_CV.pdf" download class="download-btn">
-          <ion-icon name="download-outline"></ion-icon> Download CV (Colored)
-        </a>
-        <a href="assets/Romina_Saljooghian_CV_simple.pdf" download class="download-btn btn-outline">
-          <ion-icon name="download-outline"></ion-icon> Download CV (ATS)
-        </a>
+    <section class="section" id="about">
+      <div class="section-head">
+        <span class="kicker reveal">01 — About</span>
+        <h2 class="section-title" data-reveal-lines>Bridging theory and working systems</h2>
       </div>
 
-      <!-- Education -->
-      <section class="timeline">
-        <div class="title-wrapper">
-          <div class="icon-box"><ion-icon name="school-outline"></ion-icon></div>
-          <h3 class="h3">Education</h3>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I recently completed an <strong>MSc in Automation and Control Engineering</strong> at Politecnico di Milano, with work spanning hands-on robotics and end-to-end ML development — from deploying model predictive control on real robotic hardware to building deep-learning pipelines through deployment and inference.</p>
+          <p>My thesis combined these threads in an <strong>open-vocabulary perception system</strong> for robotic manipulation, using foundation models to produce structured scene graphs so a robot understands not only what it sees, but how objects relate in space. I'm currently extending it with <strong>ROS2 integration</strong>.</p>
+          <p>I enjoy turning research ideas into reliable systems and collaborating across disciplines to build automation and AI that actually runs.</p>
         </div>
-        <ol class="timeline-list">
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">M.Sc. Automation & Control Engineering</h4>
-            <span>Politecnico di Milano &middot; 107/110</span>
-            <span class="date">Sep 2022 &ndash; Mar 2026</span>
-            <p class="timeline-text">Thesis: Open-vocabulary scene graph generation for robotic manipulation using foundation models (CLIP, SAM, Grounding DINO, RAM) &mdash; MERLIN Lab, supervised by Prof. Paolo Rocco.</p>
-          </li>
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">B.Sc. Electrical Engineering (Minor: Control)</h4>
-            <span>K.N.Toosi University of Technology, Tehran &middot; 16.16/20</span>
-            <span class="date">Sep 2016 &ndash; Aug 2020</span>
-          </li>
-        </ol>
-      </section>
 
-      <!-- Experience -->
-      <section class="timeline">
-        <div class="title-wrapper">
-          <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
-          <h3 class="h3">Experience</h3>
+        <ul class="service-list">
+          <li class="service-item reveal" data-tilt><div class="service-icon"><ion-icon name="sparkles-outline"></ion-icon></div><h3>Machine Learning &amp; AI</h3><p>Deep-learning pipelines, foundation models, LLM agentic systems, RAG, prompt engineering, experiment tracking.</p></li>
+          <li class="service-item reveal" data-tilt><div class="service-icon"><ion-icon name="eye-outline"></ion-icon></div><h3>Computer Vision</h3><p>Scene-graph generation, classification, object detection, vision-language models, open-vocabulary perception.</p></li>
+          <li class="service-item reveal" data-tilt><div class="service-icon"><ion-icon name="hardware-chip-outline"></ion-icon></div><h3>Robotics &amp; Control</h3><p>MPC, LQR, Kalman filtering, system identification, trajectory tracking, real hardware on Quanser platforms.</p></li>
+          <li class="service-item reveal" data-tilt><div class="service-icon"><ion-icon name="server-outline"></ion-icon></div><h3>Backend &amp; MLOps</h3><p>FastAPI services, pytest-driven testing, MLflow tracking, Docker, GCP deployment, CI-ready Python packages.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ─── PROJECTS ───────────────────────────────── -->
+    <section class="section" id="projects">
+      <div class="section-head">
+        <span class="kicker reveal">02 — Selected Work</span>
+        <h2 class="section-title" data-reveal-lines>Projects</h2>
+      </div>
+
+      <ul class="filter-list reveal">
+        <li><button class="filter-btn active" data-filter-btn>All</button></li>
+        <li><button class="filter-btn" data-filter-btn>AI / ML</button></li>
+        <li><button class="filter-btn" data-filter-btn>Robotics</button></li>
+        <li><button class="filter-btn" data-filter-btn>Backend</button></li>
+      </ul>
+
+      <ul class="project-grid">
+
+        <li class="project-card reveal" data-filter-item data-category="ai / ml robotics" data-tilt>
+          <div class="project-top" style="--c1:#0D9488; --c2:#065F56;"><ion-icon name="git-network-outline"></ion-icon><span class="badge">MSc Thesis</span></div>
+          <div class="project-body">
+            <span class="project-cat">AI / ML · Computer Vision</span>
+            <h3>Scene Graph Generation for Robotic Manipulation</h3>
+            <p>Modular open-vocabulary pipeline chaining 4 foundation models (CLIP, SAM, Grounding DINO, RAM) for robotic spatial understanding. 6× improvement over an end-to-end baseline, with zero-shot cross-domain transfer.</p>
+            <div class="tag-row"><span>Python</span><span>PyTorch</span><span>CLIP</span><span>SAM</span><span>GPT API</span><span>Hydra</span></div>
+            <div class="project-foot"><span class="date">2025 – 2026</span></div>
+          </div>
+        </li>
+
+        <li class="project-card reveal" data-filter-item data-category="robotics ai / ml backend" data-tilt>
+          <div class="project-top" style="--c1:#14B8A6; --c2:#0F766E;"><ion-icon name="cube-outline"></ion-icon><span class="badge">Live Demo</span></div>
+          <div class="project-body">
+            <span class="project-cat">Robot Vision · Deployed</span>
+            <h3>Tabletop Spatial Relationship Detection</h3>
+            <p>Deployable spin-off of the thesis: a CPU-only service detecting objects and their spatial relations. Key result — bounding-box <strong>geometry + a class prior beats CLIP image-text similarity</strong> for spatial predicates (0.79 zero-shot, 0.91 with a tiny trained head). FastAPI + Docker + CI, 21 tests, Gradio demo.</p>
+            <div class="tag-row"><span>Python</span><span>PyTorch</span><span>YOLO-World</span><span>FastAPI</span><span>Docker</span><span>Gradio</span></div>
+            <div class="project-foot"><span class="date">2026</span><div class="links"><a href="https://github.com/Romi-s/Lightweight-SGG" target="_blank" rel="noopener"><ion-icon name="logo-github"></ion-icon></a><a href="https://huggingface.co/spaces/Romi-s/light-SGG-demo" target="_blank" rel="noopener"><ion-icon name="rocket-outline"></ion-icon></a></div></div>
+          </div>
+        </li>
+
+        <li class="project-card reveal" data-filter-item data-category="ai / ml backend" data-tilt>
+          <div class="project-top" style="--c1:#0EA5E9; --c2:#0369A1;"><ion-icon name="document-text-outline"></ion-icon><span class="badge">Live Demo</span></div>
+          <div class="project-body">
+            <span class="project-cat">AI / ML · Backend</span>
+            <h3>Compliance RAG Agent</h3>
+            <p>RAG backend that indexes regulatory documents and answers with source citations. Hybrid retrieval combining vector similarity (ChromaDB) with BM25, merged via Reciprocal Rank Fusion. 4-node LangGraph pipeline, 21 automated tests, deployed on GCP Cloud Run.</p>
+            <div class="tag-row"><span>FastAPI</span><span>LangGraph</span><span>ChromaDB</span><span>BM25</span><span>OpenAI</span><span>RAG</span></div>
+            <div class="project-foot"><span class="date">2026</span><div class="links"><a href="https://github.com/Romi-s/Compliance-RAG-Agent" target="_blank" rel="noopener"><ion-icon name="logo-github"></ion-icon></a><a href="https://compliance-rag-agent-kwxekadtlq-ew.a.run.app/" target="_blank" rel="noopener"><ion-icon name="rocket-outline"></ion-icon></a></div></div>
+          </div>
+        </li>
+
+        <li class="project-card reveal" data-filter-item data-category="ai / ml backend" data-tilt>
+          <div class="project-top" style="--c1:#7C3AED; --c2:#5B21B6;"><ion-icon name="chatbubbles-outline"></ion-icon></div>
+          <div class="project-body">
+            <span class="project-cat">AI / ML · Backend</span>
+            <h3>Visual QA Agent</h3>
+            <p>Agentic backend answering visual questions about images and PDFs through a 4-node LangGraph pipeline with dual VLM support (Claude + GPT-4o) and conditional error routing.</p>
+            <div class="tag-row"><span>FastAPI</span><span>LangGraph</span><span>Anthropic</span><span>OpenAI</span><span>PyMuPDF</span><span>pytest</span></div>
+            <div class="project-foot"><span class="date">2026</span><div class="links"><a href="https://github.com/Romi-s/Visual-QA-Agent" target="_blank" rel="noopener"><ion-icon name="logo-github"></ion-icon></a></div></div>
+          </div>
+        </li>
+
+        <li class="project-card reveal" data-filter-item data-category="ai / ml backend" data-tilt>
+          <div class="project-top" style="--c1:#6366F1; --c2:#4338CA;"><ion-icon name="infinite-outline"></ion-icon><span class="badge">Daily Use</span></div>
+          <div class="project-body">
+            <span class="project-cat">Agentic AI · Automation</span>
+            <h3>Agentic Job-Application Automation System</h3>
+            <p>End-to-end system that runs the job hunt on autopilot: drop a job description in a folder, and a headless LLM agent scores fit, auto-generates a tailored CV for matches, and recommends what to build next. 3 scheduled workflows over a Markdown knowledge base with a git review gate — $0 running cost.</p>
+            <div class="tag-row"><span>Agentic AI</span><span>Python</span><span>PowerShell</span><span>Task Scheduler</span><span>n8n</span><span>Git</span></div>
+            <div class="project-foot"><span class="date">2026</span></div>
+          </div>
+        </li>
+
+        <li class="project-card reveal" data-filter-item data-category="ai / ml backend" data-tilt>
+          <div class="project-top" style="--c1:#059669; --c2:#047857;"><ion-icon name="leaf-outline"></ion-icon></div>
+          <div class="project-body">
+            <span class="project-cat">AI / ML · Backend</span>
+            <h3>Plant Leaf Disease Classification</h3>
+            <p>5-model ensemble CNN reaching 86% accuracy with an async REST API, Grad-CAM explainability, MLflow tracking, and a 6-module pytest test suite.</p>
+            <div class="tag-row"><span>TensorFlow</span><span>FastAPI</span><span>MLflow</span><span>Grad-CAM</span><span>pytest</span></div>
+            <div class="project-foot"><span class="date">2024</span><div class="links"><a href="https://github.com/Romi-s/Plant-Leaf-Health-Classification" target="_blank" rel="noopener"><ion-icon name="logo-github"></ion-icon></a></div></div>
+          </div>
+        </li>
+
+        <li class="project-card reveal" data-filter-item data-category="ai / ml" data-tilt>
+          <div class="project-top" style="--c1:#2563EB; --c2:#1D4ED8;"><ion-icon name="stats-chart-outline"></ion-icon></div>
+          <div class="project-body">
+            <span class="project-cat">AI / ML</span>
+            <h3>Time-Series Forecasting</h3>
+            <p>Benchmarked 6+ architectures (LSTM variants, Transformer) on 48K heterogeneous series. A convolutional LSTM with autoregressive decoding reached a test MSE of 0.01.</p>
+            <div class="tag-row"><span>TensorFlow</span><span>Keras</span><span>LSTM</span><span>NumPy</span><span>pandas</span></div>
+            <div class="project-foot"><span class="date">2024</span><div class="links"><a href="https://github.com/Romi-s/Time-Series-Forecasting" target="_blank" rel="noopener"><ion-icon name="logo-github"></ion-icon></a></div></div>
+          </div>
+        </li>
+
+        <li class="project-card reveal" data-filter-item data-category="robotics" data-tilt>
+          <div class="project-top" style="--c1:#DC2626; --c2:#991B1B;"><ion-icon name="construct-outline"></ion-icon></div>
+          <div class="project-body">
+            <span class="project-cat">Robotics · Control</span>
+            <h3>CNC Machine — 2-DOF Pantograph Robot</h3>
+            <p>Deployed 9 control strategies (PID, LQR, MPC, Kalman) on real Quanser SRV02 hardware. MPC achieved 0.26 s settling time with &lt;0.5% overshoot and near-perfect 2D trajectory tracking.</p>
+            <div class="tag-row"><span>MATLAB</span><span>Simulink</span><span>MPC</span><span>LQR</span><span>Kalman</span></div>
+            <div class="project-foot"><span class="date">2024</span></div>
+          </div>
+        </li>
+
+        <li class="project-card reveal" data-filter-item data-category="robotics" data-tilt>
+          <div class="project-top" style="--c1:#D97706; --c2:#92400E;"><ion-icon name="car-outline"></ion-icon></div>
+          <div class="project-body">
+            <span class="project-cat">Robotics · Control</span>
+            <h3>Networked Control of a Vehicle Platoon</h3>
+            <p>LMI-based state-feedback controllers for a 4-vehicle platoon under 6 communication topologies. Benchmarked centralized vs. distributed cost and convergence trade-offs.</p>
+            <div class="tag-row"><span>MATLAB</span><span>LMI</span><span>H2 Control</span><span>Networked Systems</span></div>
+            <div class="project-foot"><span class="date">2025</span></div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- ─── EXPERIENCE / EDUCATION ─────────────────── -->
+    <section class="section" id="experience">
+      <div class="section-head">
+        <span class="kicker reveal">03 — Background</span>
+        <h2 class="section-title" data-reveal-lines>Experience &amp; Education</h2>
+      </div>
+
+      <div class="timeline-cols">
+        <div class="timeline-col reveal">
+          <h3 class="col-title"><ion-icon name="briefcase-outline"></ion-icon> Experience</h3>
+          <ol class="timeline">
+            <li class="tl-item"><span class="tl-date">Jan 2020 – Sep 2021</span><h4>Delphi Software Developer</h4><span class="tl-org">Torfeh Negar Holding · Tehran, Iran</span><p>Built production UI and backend modules for the Holoo accounting software, serving thousands of business users. Optimized SQL Server queries (index tuning, rewrites, stored procedures) and stabilized nightly batch processes.</p></li>
+            <li class="tl-item"><span class="tl-date">Jun – Sep 2019</span><h4>Instrumentation &amp; Control Intern</h4><span class="tl-org">Tavan Gostare Zino · Tehran, Iran</span><p>Designed and tested industrial grounding and earthing systems, ensuring compliance with IEC standards.</p></li>
+          </ol>
         </div>
-        <ol class="timeline-list">
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Software Developer</h4>
-            <span>Torfeh Negar Holding &middot; Tehran, Iran</span>
-            <span class="date">Jan 2020 &ndash; Sep 2021</span>
-            <p class="timeline-text">Built production UI and backend modules for Holoo accounting software serving thousands of users. Optimized SQL Server queries and stabilized nightly batch processes.</p>
-          </li>
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Instrumentation & Control Intern</h4>
-            <span>Tavan Gostare Zino &middot; Tehran, Iran</span>
-            <span class="date">Jun &ndash; Sep 2019</span>
-            <p class="timeline-text">Designed and tested industrial grounding and earthing systems for IEC standards compliance.</p>
-          </li>
-        </ol>
-      </section>
 
-      <!-- Skills -->
-      <section class="skill">
-        <h3 class="h3">Skills</h3>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h4>Programming</h4>
-            <div class="skill-tags">
-              <span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">SQL</span><span class="tag">C++</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h4>ML & Deep Learning</h4>
-            <div class="skill-tags">
-              <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">scikit-learn</span><span class="tag">OpenCV</span><span class="tag">Hugging Face</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h4>LLM & Agentic AI</h4>
-            <div class="skill-tags">
-              <span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">RAG</span><span class="tag">ChromaDB</span><span class="tag">OpenAI API</span><span class="tag">Anthropic API</span><span class="tag">Prompt Engineering</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h4>Backend & API</h4>
-            <div class="skill-tags">
-              <span class="tag">FastAPI</span><span class="tag">REST API</span><span class="tag">Pydantic</span><span class="tag">pytest</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h4>MLOps & Tools</h4>
-            <div class="skill-tags">
-              <span class="tag">MLflow</span><span class="tag">Hydra</span><span class="tag">Git</span><span class="tag">Linux</span><span class="tag">LaTeX</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h4>Control & Robotics</h4>
-            <div class="skill-tags">
-              <span class="tag">Simulink</span><span class="tag">MPC</span><span class="tag">LQR</span><span class="tag">Kalman Filter</span><span class="tag">PID</span><span class="tag">Kinematics</span>
-            </div>
-          </div>
+        <div class="timeline-col reveal">
+          <h3 class="col-title"><ion-icon name="school-outline"></ion-icon> Education</h3>
+          <ol class="timeline">
+            <li class="tl-item"><span class="tl-date">Sep 2022 – Mar 2026</span><h4>M.Sc. Automation &amp; Control Engineering</h4><span class="tl-org">Politecnico di Milano · 107/110</span><p>Thesis: open-vocabulary scene-graph generation for robotic manipulation using foundation models (CLIP, SAM, Grounding DINO, RAM). MERLIN Lab, supervised by Prof. Paolo Rocco.</p></li>
+            <li class="tl-item"><span class="tl-date">Sep 2016 – Aug 2020</span><h4>B.Sc. Electrical Engineering (Minor: Control)</h4><span class="tl-org">K.N. Toosi University of Technology, Tehran · 16.16/20</span><p>Thesis: Classification of Brain Regions in the Mouse via Neural Network, supervised by Prof. Mahdi Aliyari.</p></li>
+          </ol>
         </div>
-      </section>
+      </div>
 
-      <!-- Certifications -->
-      <section class="certifications">
-        <h3 class="h3">Certifications</h3>
+      <div class="certs reveal">
+        <h3 class="col-title"><ion-icon name="ribbon-outline"></ion-icon> Certifications</h3>
         <ul class="cert-list">
-          <li><span class="cert-name">LangGraph Essentials</span><span class="cert-issuer">LangChain Academy, 2026</span></li>
-          <li><span class="cert-name">Automation Explorer</span><span class="cert-issuer">UiPath Academy, 2026</span></li>
-          <li><span class="cert-name">Python</span><span class="cert-issuer">freeCodeCamp, 2026</span></li>
-          <li><span class="cert-name">Relational Databases</span><span class="cert-issuer">freeCodeCamp, 2026</span></li>
+          <li><span>LangGraph Essentials (Python)</span><em>LangChain Academy · 2026</em></li>
+          <li><span>UiPath Automation Explorer</span><em>UiPath Academy · 2026</em></li>
+          <li><span>Python</span><em>freeCodeCamp · 2026</em></li>
+          <li><span>Relational Databases</span><em>freeCodeCamp · 2026</em></li>
         </ul>
-      </section>
+      </div>
+    </section>
 
-    </article>
+    <!-- ─── SKILLS ─────────────────────────────────── -->
+    <section class="section" id="skills">
+      <div class="section-head">
+        <span class="kicker reveal">04 — Toolbox</span>
+        <h2 class="section-title" data-reveal-lines>Skills</h2>
+      </div>
 
-    <!-- ─── PORTFOLIO ──────────────────────────────── -->
-    <article class="portfolio" data-page="portfolio">
-      <header><h2 class="h2 article-title">Portfolio</h2></header>
+      <div class="marquee reveal" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>Keras</span><span>scikit-learn</span><span>OpenCV</span><span>Hugging Face</span><span>LangGraph</span><span>LangChain</span><span>RAG</span><span>ChromaDB</span>
+          <span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>Keras</span><span>scikit-learn</span><span>OpenCV</span><span>Hugging Face</span><span>LangGraph</span><span>LangChain</span><span>RAG</span><span>ChromaDB</span>
+        </div>
+      </div>
+      <div class="marquee marquee-rev reveal" aria-hidden="true">
+        <div class="marquee-track">
+          <span>FastAPI</span><span>Docker</span><span>GCP</span><span>MLflow</span><span>Hydra</span><span>Git</span><span>Linux</span><span>MATLAB</span><span>Simulink</span><span>MPC</span><span>LQR</span><span>Kalman</span><span>ROS2</span><span>OpenAI</span><span>Anthropic</span>
+          <span>FastAPI</span><span>Docker</span><span>GCP</span><span>MLflow</span><span>Hydra</span><span>Git</span><span>Linux</span><span>MATLAB</span><span>Simulink</span><span>MPC</span><span>LQR</span><span>Kalman</span><span>ROS2</span><span>OpenAI</span><span>Anthropic</span>
+        </div>
+      </div>
 
-      <section class="projects">
-        <ul class="filter-list">
-          <li><button class="filter-btn active" data-filter-btn>All</button></li>
-          <li><button class="filter-btn" data-filter-btn>AI / ML</button></li>
-          <li><button class="filter-btn" data-filter-btn>Robotics</button></li>
-          <li><button class="filter-btn" data-filter-btn>Backend</button></li>
-        </ul>
-
-        <ul class="project-list">
-
-          <!-- Scene Graph Generation -->
-          <li class="project-item active" data-filter-item data-category="ai / ml">
-            <div class="project-card">
-              <figure class="project-img" style="background: linear-gradient(135deg, #0D9488, #065F56);">
-                <div class="project-img-icon"><ion-icon name="git-network-outline"></ion-icon></div>
-                <span class="badge">MSc Thesis</span>
-              </figure>
-              <div class="project-content">
-                <span class="project-category">AI / ML &middot; Computer Vision</span>
-                <h3 class="project-title">Scene Graph Generation for Robotic Manipulation</h3>
-                <p>Modular open-vocabulary pipeline chaining 4 foundation models (CLIP, SAM, Grounding DINO, RAM) for robotic spatial understanding. 6&times; improvement over end-to-end baseline. Zero-shot cross-domain transfer.</p>
-                <div class="project-tags">
-                  <span>Python</span><span>PyTorch</span><span>CLIP</span><span>SAM</span><span>GPT API</span><span>Hydra</span>
-                </div>
-                <div class="project-meta">
-                  <span class="date">2025 &ndash; 2026</span>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- Tabletop Spatial Relationship Detection (deployed spin-off of the thesis) -->
-          <li class="project-item active" data-filter-item data-category="robotics">
-            <div class="project-card">
-              <figure class="project-img" style="background: linear-gradient(135deg, #14B8A6, #0F766E);">
-                <div class="project-img-icon"><ion-icon name="cube-outline"></ion-icon></div>
-                <span class="badge">Live Demo</span>
-              </figure>
-              <div class="project-content">
-                <span class="project-category">Robot Vision &middot; Deployed</span>
-                <h3 class="project-title">Tabletop Spatial Relationship Detection</h3>
-                <p>Deployable spin-off of the thesis: a CPU-only service detecting objects and their spatial relations. Key result &mdash; bounding-box <strong>geometry + a class prior beats CLIP image-text similarity</strong> for spatial predicates (0.79 zero-shot, 0.91 with a tiny trained head). FastAPI + Docker + CI, 21 tests, Gradio demo.</p>
-                <div class="project-tags">
-                  <span>Python</span><span>PyTorch</span><span>YOLO-World</span><span>FastAPI</span><span>Docker</span><span>Gradio</span>
-                </div>
-                <div class="project-meta">
-                  <span class="date">2026</span>
-                  <a href="https://github.com/Romi-s/Lightweight-SGG" target="_blank" class="project-link"><ion-icon name="logo-github"></ion-icon> GitHub</a>
-                  <a href="https://huggingface.co/spaces/Romi-s/light-SGG-demo" target="_blank" class="project-link"><ion-icon name="rocket-outline"></ion-icon> Demo</a>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- Compliance RAG Agent -->
-          <li class="project-item active" data-filter-item data-category="ai / ml">
-            <div class="project-card">
-              <figure class="project-img" style="background: linear-gradient(135deg, #0EA5E9, #0369A1);">
-                <div class="project-img-icon"><ion-icon name="document-text-outline"></ion-icon></div>
-                <span class="badge">Live Demo</span>
-              </figure>
-              <div class="project-content">
-                <span class="project-category">AI / ML &middot; Backend</span>
-                <h3 class="project-title">Compliance RAG Agent</h3>
-                <p>RAG backend that indexes regulatory documents and answers questions with source citations. Hybrid retrieval combining vector similarity (ChromaDB) with BM25 keyword search, merged using Reciprocal Rank Fusion. 4-node LangGraph pipeline with 21 automated tests.</p>
-                <div class="project-tags">
-                  <span>FastAPI</span><span>LangGraph</span><span>ChromaDB</span><span>BM25</span><span>OpenAI</span><span>RAG</span><span>pytest</span>
-                </div>
-                <div class="project-meta">
-                  <span class="date">2026</span>
-                  <a href="https://github.com/Romi-s/Compliance-RAG-Agent" target="_blank" class="project-link"><ion-icon name="logo-github"></ion-icon> GitHub</a>
-                  <a href="https://compliance-rag-agent-kwxekadtlq-ew.a.run.app/" target="_blank" class="project-link"><ion-icon name="rocket-outline"></ion-icon> Demo</a>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- Visual QA Agent -->
-          <li class="project-item active" data-filter-item data-category="ai / ml">
-            <div class="project-card">
-              <figure class="project-img" style="background: linear-gradient(135deg, #7C3AED, #5B21B6);">
-                <div class="project-img-icon"><ion-icon name="chatbubbles-outline"></ion-icon></div>
-              </figure>
-              <div class="project-content">
-                <span class="project-category">AI / ML &middot; Backend</span>
-                <h3 class="project-title">Visual QA Agent</h3>
-                <p>Agentic backend answering visual questions about images and PDFs through a 4-node LangGraph pipeline with dual VLM support (Claude + GPT-4o) and conditional error routing.</p>
-                <div class="project-tags">
-                  <span>FastAPI</span><span>LangGraph</span><span>Anthropic</span><span>OpenAI</span><span>PyMuPDF</span><span>pytest</span>
-                </div>
-                <div class="project-meta">
-                  <span class="date">2026</span>
-                  <a href="https://github.com/Romi-s/Visual-QA-Agent" target="_blank" class="project-link"><ion-icon name="logo-github"></ion-icon> GitHub</a>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- Plant Leaf Classification -->
-          <li class="project-item active" data-filter-item data-category="ai / ml">
-            <div class="project-card">
-              <figure class="project-img" style="background: linear-gradient(135deg, #059669, #047857);">
-                <div class="project-img-icon"><ion-icon name="leaf-outline"></ion-icon></div>
-              </figure>
-              <div class="project-content">
-                <span class="project-category">AI / ML &middot; Backend</span>
-                <h3 class="project-title">Plant Leaf Disease Classification</h3>
-                <p>5-model ensemble CNN achieving 86% accuracy with async REST API, Grad-CAM explainability, MLflow tracking, and a 6-module pytest test suite.</p>
-                <div class="project-tags">
-                  <span>TensorFlow</span><span>FastAPI</span><span>MLflow</span><span>pytest</span><span>Grad-CAM</span>
-                </div>
-                <div class="project-meta">
-                  <span class="date">2024</span>
-                  <a href="https://github.com/Romi-s/Plant-Leaf-Health-Classification" target="_blank" class="project-link"><ion-icon name="logo-github"></ion-icon> GitHub</a>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- Time-Series Forecasting -->
-          <li class="project-item active" data-filter-item data-category="ai / ml">
-            <div class="project-card">
-              <figure class="project-img" style="background: linear-gradient(135deg, #2563EB, #1D4ED8);">
-                <div class="project-img-icon"><ion-icon name="stats-chart-outline"></ion-icon></div>
-              </figure>
-              <div class="project-content">
-                <span class="project-category">AI / ML</span>
-                <h3 class="project-title">Time-Series Forecasting</h3>
-                <p>Benchmarked 6+ architectures (LSTM variants, Transformer) on 48K heterogeneous time series. Conv. LSTM with autoregressive decoding achieved test MSE of 0.01.</p>
-                <div class="project-tags">
-                  <span>TensorFlow</span><span>Keras</span><span>LSTM</span><span>NumPy</span><span>pandas</span>
-                </div>
-                <div class="project-meta">
-                  <span class="date">2024</span>
-                  <a href="https://github.com/Romi-s/Time-Series-Forecasting" target="_blank" class="project-link"><ion-icon name="logo-github"></ion-icon> GitHub</a>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- CNC Machine -->
-          <li class="project-item active" data-filter-item data-category="robotics">
-            <div class="project-card">
-              <figure class="project-img" style="background: linear-gradient(135deg, #DC2626, #991B1B);">
-                <div class="project-img-icon"><ion-icon name="construct-outline"></ion-icon></div>
-              </figure>
-              <div class="project-content">
-                <span class="project-category">Robotics &middot; Control</span>
-                <h3 class="project-title">CNC Machine &mdash; 2-DOF Pantograph Robot</h3>
-                <p>Deployed 9 control strategies (PID, LQR, MPC, Kalman) on real Quanser SRV02 hardware. MPC achieved 0.26s settling time with &lt;0.5% overshoot. Near-perfect 2D trajectory tracking.</p>
-                <div class="project-tags">
-                  <span>MATLAB</span><span>Simulink</span><span>MPC</span><span>LQR</span><span>Kalman</span>
-                </div>
-                <div class="project-meta">
-                  <span class="date">2024</span>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- Vehicle Platoon -->
-          <li class="project-item active" data-filter-item data-category="robotics">
-            <div class="project-card">
-              <figure class="project-img" style="background: linear-gradient(135deg, #D97706, #92400E);">
-                <div class="project-img-icon"><ion-icon name="car-outline"></ion-icon></div>
-              </figure>
-              <div class="project-content">
-                <span class="project-category">Robotics &middot; Control</span>
-                <h3 class="project-title">Networked Control of a Vehicle Platoon</h3>
-                <p>LMI-based state-feedback controllers for a 4-vehicle platoon under 6 communication topologies. Benchmarked centralized vs. distributed cost and convergence trade-offs.</p>
-                <div class="project-tags">
-                  <span>MATLAB</span><span>LMI</span><span>H2 Control</span><span>Networked Systems</span>
-                </div>
-                <div class="project-meta">
-                  <span class="date">2025</span>
-                </div>
-              </div>
-            </div>
-          </li>
-
-        </ul>
-      </section>
-    </article>
+      <div class="skills-grid">
+        <div class="skill-card reveal" data-tilt><h4>Programming</h4><div class="tag-row"><span>Python</span><span>MATLAB</span><span>SQL</span><span>C++</span></div></div>
+        <div class="skill-card reveal" data-tilt><h4>ML &amp; Deep Learning</h4><div class="tag-row"><span>PyTorch</span><span>TensorFlow</span><span>Keras</span><span>scikit-learn</span><span>OpenCV</span><span>Hugging Face</span></div></div>
+        <div class="skill-card reveal" data-tilt><h4>LLM &amp; Agentic AI</h4><div class="tag-row"><span>LangGraph</span><span>LangChain</span><span>RAG</span><span>ChromaDB</span><span>OpenAI API</span><span>Anthropic API</span><span>Prompt Engineering</span></div></div>
+        <div class="skill-card reveal" data-tilt><h4>Backend &amp; API</h4><div class="tag-row"><span>FastAPI</span><span>REST API</span><span>Pydantic</span><span>pytest</span></div></div>
+        <div class="skill-card reveal" data-tilt><h4>MLOps &amp; Cloud</h4><div class="tag-row"><span>MLflow</span><span>Hydra</span><span>Docker</span><span>GCP</span><span>Git</span><span>Linux</span></div></div>
+        <div class="skill-card reveal" data-tilt><h4>Control &amp; Robotics</h4><div class="tag-row"><span>Simulink</span><span>MPC</span><span>LQR</span><span>Kalman Filter</span><span>PID</span><span>ROS2</span></div></div>
+      </div>
+    </section>
 
     <!-- ─── CONTACT ────────────────────────────────── -->
-    <article class="contact" data-page="contact">
-      <header><h2 class="h2 article-title">Contact</h2></header>
+    <section class="section" id="contact">
+      <div class="section-head">
+        <span class="kicker reveal">05 — Contact</span>
+        <h2 class="section-title" data-reveal-lines>Let's build something</h2>
+      </div>
 
-      <section class="contact-info-section">
-        <ul class="contact-cards">
-          <li class="contact-card">
-            <div class="card-icon"><ion-icon name="mail-outline"></ion-icon></div>
-            <h3>Email</h3>
-            <a href="mailto:romina.saljooghian@mail.polimi.it">romina.saljooghian@mail.polimi.it</a>
-          </li>
-          <li class="contact-card">
-            <div class="card-icon"><ion-icon name="call-outline"></ion-icon></div>
-            <h3>Phone</h3>
-            <a href="tel:+393515063959">+39 351 506 3959</a>
-          </li>
-          <li class="contact-card">
-            <div class="card-icon"><ion-icon name="location-outline"></ion-icon></div>
-            <h3>Location</h3>
-            <p>Milan, Italy</p>
-          </li>
-          <li class="contact-card">
-            <div class="card-icon"><ion-icon name="logo-linkedin"></ion-icon></div>
-            <h3>LinkedIn</h3>
-            <a href="https://linkedin.com/in/romina-saljooghian" target="_blank">romina-saljooghian</a>
-          </li>
+      <div class="contact-grid">
+        <ul class="contact-cards reveal">
+          <li data-tilt><div class="ci"><ion-icon name="mail-outline"></ion-icon></div><div><span>Email</span><a href="mailto:romina.saljooghian@mail.polimi.it">romina.saljooghian@mail.polimi.it</a></div></li>
+          <li data-tilt><div class="ci"><ion-icon name="call-outline"></ion-icon></div><div><span>Phone</span><a href="tel:+393515063959">+39 351 506 3959</a></div></li>
+          <li data-tilt><div class="ci"><ion-icon name="location-outline"></ion-icon></div><div><span>Location</span><p>Milan, Italy</p></div></li>
+          <li data-tilt><div class="ci"><ion-icon name="logo-linkedin"></ion-icon></div><div><span>LinkedIn</span><a href="https://linkedin.com/in/romina-saljooghian" target="_blank" rel="noopener">romina-saljooghian</a></div></li>
         </ul>
-      </section>
 
-      <section class="contact-form-section">
-        <h3 class="h3">Send a Message</h3>
-        <form action="https://formspree.io/f/xaqkwzag" method="POST" class="contact-form">
-          <div class="input-wrapper">
-            <input type="text" name="name" class="form-input" placeholder="Full Name" required>
-            <input type="email" name="email" class="form-input" placeholder="Email Address" required>
+        <form action="https://formspree.io/f/xaqkwzag" method="POST" class="contact-form reveal">
+          <div class="field-row">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
           </div>
-          <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
-          <button type="submit" class="form-btn">
-            <ion-icon name="paper-plane-outline"></ion-icon>
-            <span>Send Message</span>
-          </button>
+          <textarea name="message" placeholder="Your message" required></textarea>
+          <button type="submit" class="btn btn-primary" data-magnetic><ion-icon name="paper-plane-outline"></ion-icon> Send Message</button>
         </form>
-      </section>
-    </article>
+      </div>
+    </section>
 
-  </div>
-</main>
+  </main>
 
-<script src="script.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <footer class="footer">
+    <p>© <span data-year></span> Romina Saljooghian · Built with care in Milan</p>
+    <ul class="footer-social">
+      <li><a href="https://github.com/Romi-s" target="_blank" rel="noopener" aria-label="GitHub" data-magnetic><ion-icon name="logo-github"></ion-icon></a></li>
+      <li><a href="https://linkedin.com/in/romina-saljooghian" target="_blank" rel="noopener" aria-label="LinkedIn" data-magnetic><ion-icon name="logo-linkedin"></ion-icon></a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
