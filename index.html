@@ -73,7 +73,7 @@
             <img src="assets/photo.jpg" alt="Romina Saljooghian" class="hero-photo">
           </div>
           <div class="hero-stats">
-            <div class="stat"><strong data-count="8" data-suffix="+">0</strong><span>Shipped projects</span></div>
+            <div class="stat"><strong data-count="9" data-suffix="+">0</strong><span>Shipped projects</span></div>
             <div class="stat"><strong data-count="107" data-suffix="/110">0</strong><span>MSc final grade</span></div>
             <div class="stat"><strong data-count="4" data-suffix="">0</strong><span>Foundation models chained</span></div>
           </div>
@@ -92,7 +92,7 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>I recently completed an <strong>MSc in Automation and Control Engineering</strong> at Politecnico di Milano, with work spanning hands-on robotics and end-to-end ML development — from deploying model predictive control on real robotic hardware to building deep-learning pipelines through deployment and inference.</p>
-          <p>My thesis combined these threads in an <strong>open-vocabulary perception system</strong> for robotic manipulation, using foundation models to produce structured scene graphs so a robot understands not only what it sees, but how objects relate in space. I'm currently extending it with <strong>ROS2 integration</strong>.</p>
+          <p>My thesis combined these threads in an <strong>open-vocabulary perception system</strong> for robotic manipulation, using foundation models to produce structured scene graphs so a robot understands not only what it sees, but how objects relate in space. It has since grown into <a href="https://github.com/Romi-s/lang2action" target="_blank" rel="noopener"><strong>lang2action</strong></a>, a language-to-action robotic agent with an MCP server, a LangGraph planner with a hallucination guard, and a <strong>ROS2 + C++</strong> control node.</p>
           <p>I enjoy turning research ideas into reliable systems and collaborating across disciplines to build automation and AI that actually runs.</p>
         </div>
 
@@ -120,6 +120,17 @@
       </ul>
 
       <ul class="project-grid">
+
+        <li class="project-card reveal" data-filter-item data-category="ai / ml robotics backend" data-tilt>
+          <div class="project-top" style="--c1:#DC2626; --c2:#991B1B;"><ion-icon name="hand-right-outline"></ion-icon><span class="badge">Flagship</span></div>
+          <div class="project-body">
+            <span class="project-cat">Robotics · Agentic AI</span>
+            <h3>lang2action — Language-to-Action Robotic Agent</h3>
+            <p>Tell it <em>"stack the red cube on the blue box"</em>: a custom <strong>MCP server</strong> turns perception into a scene graph, a LangGraph agent grounds the command and refuses when the object isn't there (<strong>hallucination guard</strong>), and a controller executes pick-and-place in PyBullet — with a <strong>ROS2 + C++</strong> action server. Eval-first: 0.95 grounding / 0.95 task success / 1.00 refusal; closed a measured perception domain gap <strong>12% → 72% recall without training</strong>. 47 tests.</p>
+            <div class="tag-row"><span>Python</span><span>C++</span><span>LangGraph</span><span>MCP</span><span>PyBullet</span><span>ROS2</span></div>
+            <div class="project-foot"><span class="date">2026</span><div class="links"><a href="https://github.com/Romi-s/lang2action" target="_blank" rel="noopener"><ion-icon name="logo-github"></ion-icon></a></div></div>
+          </div>
+        </li>
 
         <li class="project-card reveal" data-filter-item data-category="ai / ml robotics" data-tilt>
           <div class="project-top" style="--c1:#0D9488; --c2:#065F56;"><ion-icon name="git-network-outline"></ion-icon><span class="badge">MSc Thesis</span></div>
@@ -170,9 +181,9 @@
           <div class="project-body">
             <span class="project-cat">Agentic AI · Automation</span>
             <h3>Agentic Job-Application Automation System</h3>
-            <p>End-to-end system that runs the job hunt on autopilot: drop a job description in a folder, and a headless LLM agent scores fit, auto-generates a tailored CV for matches, and recommends what to build next. 3 scheduled workflows over a Markdown knowledge base with a git review gate — $0 running cost.</p>
-            <div class="tag-row"><span>Agentic AI</span><span>Python</span><span>PowerShell</span><span>Task Scheduler</span><span>n8n</span><span>Git</span></div>
-            <div class="project-foot"><span class="date">2026</span></div>
+            <p>Runs my job hunt daily: drop a job description in a folder and an event-driven watcher wakes a headless LLM agent that scores fit, auto-generates a tailored CV for matches, queues human outreach with follow-up tracking, and learns from interview debriefs. 5 workflows over a Markdown knowledge base, <strong>git working tree as the review gate</strong>, ~$0 idle cost.</p>
+            <div class="tag-row"><span>Agentic AI</span><span>Claude Code</span><span>PowerShell</span><span>LLM workflows</span><span>Obsidian</span><span>Git</span></div>
+            <div class="project-foot"><span class="date">2026</span><div class="links"><a href="https://github.com/Romi-s/jobhunt-agent" target="_blank" rel="noopener"><ion-icon name="logo-github"></ion-icon></a></div></div>
           </div>
         </li>
 
